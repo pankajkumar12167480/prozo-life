@@ -1,0 +1,103 @@
+/* group-login.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .login-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    animation: scaleIn 0.6s ease;
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  #logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    background-image: url('prozo-life-image.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  h2 {
+    margin-bottom: 24px;
+    color: #1f2937;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    border-color: #66a6ff;
+    box-shadow: 0 0 8px rgba(102, 166, 255, 0.3);
+    outline: none;
+  }
+  
+  .btn {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 16px;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(to right, #0072ff, #0052cc);
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 114, 255, 0.3);
+  }
+  
+  .links {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: #0072ff;
+    font-weight: 500;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
