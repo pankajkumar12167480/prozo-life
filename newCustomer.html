@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prozo-Life - Customer Login</title>
+    <title>Prozo-Life - new Customer Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="customer-login.css"> <!-- Link to the new CSS file -->
+    <link rel="stylesheet" href="newCustomer.css"> <!-- Link to the new CSS file -->
 </head>
 <body>
 
@@ -26,19 +26,22 @@
     <!-- Login Container -->
     <div class="login-container">
         <div id="logo-img"></div>
-        <h2>Customer Login</h2>
+        <h2>New Customer Login</h2>
         
         <!-- Close Button (Cross) -->
         <div class="close-btn" onclick="window.location.href='index.html'">×</div>
         
         <form action="#">
-            <input type="text" id="username" placeholder="Enter your username" required>
-            <input type="password" id="password" placeholder="Enter your password" required>
+            <input type="text" id="username" placeholder="Full Name" required>
+            <input type="text" id="Organization" placeholder="Business/Organization Name (if any)">
+            <input type="email" id="email" placeholder="Email id" required>
+            <input type="number" id="phone_no." placeholder="Phone Number" required>
+            <input type="text" id="location" placeholder="Location(city, state , country)" required>
             <button type="button" class="btn" onclick="window.location.href='lendingCustomer.html'">Login</button>
         </form>
 
         <div class="links">
-            <p>New customer? <a href="newCustomer.html">Sign up</a></p>
+            <p>Existing user? <a href="customer-login.html">Sign in</a></p>
             <p><a href="#">Forgot Password?</a></p>
         </div>
     </div>

@@ -2,18 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prozo-Life - Developer Login</title>
     <link rel="stylesheet" href="developer-option.css">
 </head>
 <body>
-    <div class="login-container">
-        <div id="logo-img">
-            
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-left">
+            <div id="nav-logo"></div>
+            <div class="brand-name">Prozo-Life</div>
         </div>
-        <h2>Developer Login</h2>
-        <button class="btn" onclick="window.location.href='indivisual-login.html'">Login as Indivisual</button>
-        <button class="btn" onclick="window.location.href='group-login.html'">Login as group</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
     </div>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <!-- Cross Button -->
+        <div class="close-btn" onclick="window.location.href='index.html'">×</div>
+        
+        <h2>Developer Login</h2>
+        <button class="btn" onclick="window.location.href='indivisual-login.html'">Login as Individual</button>
+        <button class="btn" onclick="window.location.href='group-login.html'">Login as Group</button>
+    </div>
+
 </body>
 </html>

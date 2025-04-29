@@ -9,15 +9,27 @@
 </head>
 <body>
 
-    <div class="login-container">
-        <div id="logo-img">
-            <!-- Optional logo image -->
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-left">
+            <div id="nav-logo"></div>
+            <span class="brand-name">Prozo-Life</span>
         </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">login</a></li>
+        </ul>
+    </div>
 
+    <!-- Login Container -->
+    <div class="login-container">
+        <div id="logo-img"></div>
         <h2>Developer Group Login</h2>
-        
-        <form action="#" >
-            <input type="text"  placeholder="Enter your group/team name" required>
+        <div class="close-btn" onclick="window.location.href='index.html'">×</div>
+        <form action="#">
+            <input type="text" placeholder="Enter your group/team name" required>
             <input type="text" placeholder="Enter your group ID" required>
             <input type="password" placeholder="Enter your group password" required>
             <button type="button" class="btn" onclick="window.location.href='leadingDeveloper.html'">Login</button>

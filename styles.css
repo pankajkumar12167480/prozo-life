@@ -1,146 +1,255 @@
-/* styles.css */
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to top, #e0f7fa, #00080d);
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #000000;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    animation: fadeInBody 1s ease-in-out;
-}
-
-@keyframes fadeInBody {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-#logo-img {
-    width: 50px;
-    height: 50px;
+    text-align: center;
+    overflow-x: hidden;
+    padding-top: 80px; /* Space for navbar */
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #nav-logo {
+    width: 40px;
+    height: 40px;
+    background: url('prozo-life-image.jpg') no-repeat center center/cover;
     border-radius: 50%;
-    margin-left: 46%;
-    background-image: url('prozo-life-image.jpg');
-    background-size: cover;
-    background-position: center;
-}
-.login-container {
-    background-color: #e7f5e8;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand-name {
+    color: #5d5fef;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #5d5fef;
+  }
+  
+  /* Login box */
+  .login-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.15);
     width: 100%;
     max-width: 420px;
     padding: 48px 40px;
-    text-align: center;
-    animation: fadeInBox 0.6s ease-out;
-}
-
-@keyframes fadeInBox {
+    animation: fadeInBox 0.8s ease-out;
+    position: relative;
+  }
+  
+  /* Fade-in */
+  @keyframes fadeInBox {
     from {
-        transform: scale(0.95);
-        opacity: 0;
+      transform: scale(0.95);
+      opacity: 0;
     }
     to {
-        transform: scale(1);
-        opacity: 1;
+      transform: scale(1);
+      opacity: 1;
     }
-}
-
-h2 {
-    margin-bottom: 40px;
-    color: #090209;
-    font-weight: 1000;
-    font-size: 32px;
-    letter-spacing: 0.5px;
-}
-
-.btn {
-    background: linear-gradient(to right, #025166, #0072ff);
+  }
+  
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 28px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    font-weight: bold;
+  }
+  
+  .close-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(90deg) scale(1.1);
+  }
+  
+  /* Logo inside login */
+  #logo-img {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: url('prozo-life-image.jpg') no-repeat center center/cover;
+    border-radius: 50%;
+    background-color: #333;
+  }
+  
+  /* Heading */
+  h2 {
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  h2 span {
+    color: #5d5fef;
+  }
+  
+  /* Buttons */
+  .role-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .role-selection button {
+    background: linear-gradient(135deg, #42a5f5, #478ed1);
     color: #fff;
     border: none;
     padding: 14px 20px;
     font-size: 16px;
-    width: 100%;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 18px;
     font-weight: 600;
-    box-shadow: 0 6px 12px rgba(0, 114, 255, 0.25);
-}
-
-.btn:hover {
-    background: linear-gradient(to right, #0072ff, #0052cc);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 10px 18px rgba(0, 114, 255, 0.3);
-}
-
-.role-selection {
-    margin-bottom: 28px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.role-selection button {
-    background: linear-gradient(to right, #42a5f5, #1e88e5);
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    font-weight: 500;
-}
-
-.role-selection button:hover {
-    background: linear-gradient(to right, #1e88e5, #1565c0);
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(66, 165, 245, 0.3);
+  }
+  
+  .role-selection button:hover {
+    background: linear-gradient(135deg, #478ed1, #42a5f5);
     transform: scale(1.05);
-}
-
-.links {
-    margin-top: 24px;
-    font-size: 14px;
-    color: #555;
-}
-
-.links a {
-    text-decoration: none;
-    color: #0072ff;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.links a:hover {
-    text-decoration: underline;
-    color: #0052cc;
-}
-
-/* Responsive improvements (optional) */
-@media (max-width: 480px) {
-    .login-container {
-        padding: 32px 24px;
+    box-shadow: 0 6px 20px rgba(66, 165, 245, 0.5);
+  }
+  
+  /* Content after closing login */
+  .content-container {
+    display: none;
+    max-width: 800px;
+    padding: 20px;
+    margin-top: 40px;
+    color: #ffffff;
+    animation: fadeInContent 1s ease-in-out;
+  }
+  
+  @keyframes fadeInContent {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
     }
-
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .content-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #5d5fef;
+  }
+  
+  .content-container p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    margin-top: 50px;
+    color: #fff;
+  }
+  
+  .contact-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #5d5fef;
+  }
+  
+  .contact-section p {
+    font-size: 18px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 15px;
+    }
+    .nav-links li a {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 0 20px;
+    }
+  
+    .brand-name {
+      font-size: 20px;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
     h2 {
-        font-size: 24px;
+      font-size: 24px;
     }
-
-    .btn {
-        font-size: 15px;
+  
+    .content-container h1 {
+      font-size: 28px;
     }
-
-    .role-selection button {
-        padding: 10px 16px;
-        font-size: 14px;
+  
+    .content-container p {
+      font-size: 16px;
     }
-}
+  }
+  

@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prozo-Life - Developer Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="indivisual-login.css"> <!-- Link to the developer CSS -->
+    <link rel="stylesheet" href="indivisual-login.css">
 </head>
 <body>
 
-    <div class="login-container">
-        <div id="logo-img">
-            
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-left">
+            <div id="nav-logo"></div>
+            <span class="brand-name">Prozo-Life</span>
         </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="indivisual-login.html">Login</a></li>
+        </ul>
+    </div>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <div class="close-btn" onclick="window.location.href='index.html'">×</div>
+        <div id="logo-img"></div>
         <h2>Developer Login (Indivisual)</h2>
-        
+
         <form action="#">
-            <input type="text" id="username"  placeholder="Enter your username"  required>
+            <input type="text" id="username" placeholder="Enter your username" required>
             <input type="password" id="password" placeholder="Enter your password" required>
-            <button type="button" class="btn"  onclick="window.location.href='leadingDeveloper.html'">Login</button>
-        
-         </form>
+            <button type="button" class="btn" onclick="window.location.href='leadingDeveloper.html'">Login</button>
+        </form>
 
         <div class="links">
             <p>New developer? <a href="#">Sign up</a></p>
