@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prozo-Life - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index1.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div id="nav-logo"></div>
+      <span class="brand-name">Prozo-Life</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#info-content">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="index1.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login Box -->
+  <div class="login-container" id="login-box">
+    <div class="close-btn" onclick="showContent()">×</div>
+    <div id="logo-img"></div>
+    <h2>Welcome to <span>Prozo-Life</span></h2>
+
+    <div class="role-selection">
+      <button onclick="window.location.href='customer-login.html'">Login as Customer</button>
+      <button onclick="window.location.href='developer-option.html'">Login as Developer</button>
+    </div>
+  </div>
+
+  <!-- Hidden Content -->
+  <div class="content-container" id="info-content">
+    <h1>About Prozo-Life</h1>
+    <p>
+      Prozo-Life is a dynamic platform designed to bridge the gap between talented developers and customers seeking high-quality digital solutions.
+      Whether you're a customer looking for professional website or app development, or a developer ready to work on exciting real-world projects,
+      Prozo-Life is your perfect launchpad.  
+      <br><br>
+      Our mission is to create opportunities, build connections, and empower individuals and businesses to thrive in the digital era.
+      Join us and be a part of a growing community that values innovation, collaboration, and success.
+    </p>
+  </div>
+
+  <!-- Dummy Contact Section -->
+  <div class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <p>For inquiries, email us at: <strong>support@prozo-life.com</strong></p>
+  </div>
+
+  <script>
+    function showContent() {
+      window.location.href = "main.html";
+    }
+  </script>
+
+</body>
+</html>

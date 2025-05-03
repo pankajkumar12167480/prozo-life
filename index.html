@@ -1,71 +1,98 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prozo-Life - Login</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prozo-Life Landing Page</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-left">
-      <div id="nav-logo"></div>
-      <span class="brand-name">Prozo-Life</span>
+        <div id="nav-logo"></div>
+        <span class="brand-name">Prozo-Life</span>
+      </div>
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how-we-work">How We Work</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a onclick="window.location.href='index1.html'" class="login-btn">Login</a></li>
+      </ul>
     </div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#info-content">About Us</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-      <li><a href="index.html">Login</a></li>
-    </ul>
   </nav>
 
-  <!-- Login Box -->
-  <div class="login-container" id="login-box">
-    <div class="close-btn" onclick="showContent()">×</div>
-    <div id="logo-img"></div>
-    <h2>Welcome to <span>Prozo-Life</span></h2>
+  <div class="container">
+    <header>
+      <h1>Welcome to Prozo-Life</h1>
+      <p>Bridging the gap between skilled students and real-world projects</p>
+    </header>
 
-    <div class="role-selection">
-      <button onclick="window.location.href='customer-login.html'">Login as Customer</button>
-      <button onclick="window.location.href='developer-option.html'">Login as Developer</button>
-    </div>
+    <section id="about">
+      <h2>About Prozo-Life</h2>
+      <p>
+        Prozo-Life is a dynamic platform built to empower student developers by connecting them with real-world clients. We aim to create a space where learning meets practical experience. Whether you're a first-year student looking to enhance your skills or a final-year developer ready for industry-level exposure, Prozo-Life provides the right opportunities.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Website Development</li>
+        <li>Mobile App Development</li>
+        <li>AI & Machine Learning Solutions</li>
+        <li>UI/UX Design</li>
+        <li>Freelance Project Collaboration</li>
+      </ul>
+    </section>
+
+    <section id="how-we-work">
+      <h2>How We Work</h2>
+      <p>
+        We bring together aspiring developers and clients through a structured workflow:
+      </p>
+      <ol>
+        <li>Clients submit their project requirements.</li>
+        <li>We assign a team of vetted student developers based on skills.</li>
+        <li>Regular updates and communication are maintained throughout the project.</li>
+        <li>Final delivery with client feedback and certification for developers.</li>
+      </ol>
+    </section>
+
+    <main class="grid">
+      <!-- For Students -->
+      <div class="card">
+        <h2>Are you a Student Developer?</h2>
+        <p>
+          Join real projects, gain experience, and build your portfolio.
+          From 1st-year learners to final-year coders, there's a place for everyone.
+        </p>
+        <a onclick="window.location.href='developer-option.html'" class="button blue-button">Join as Developer</a>
+      </div>
+
+      <!-- For Customers -->
+      <div class="card">
+        <h2>Are you a Customer?</h2>
+        <p>
+          Get your website, app, or AI solution built by a team of vetted student developers at affordable rates.
+        </p>
+        <a onclick="window.location.href='customer-login.html'" class="button green-button">Request a Service</a>
+      </div>
+    </main>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: support@prozo-life.com</p>
+      <p>Phone: +91-9883017317</p>
+      <p>Location: Remote, India</p>
+    </section>
+
+    <footer>
+      © 2025 Prozo-Life. Built to Empower.
+    </footer>
   </div>
-
-  <!-- Hidden Content -->
-  <div class="content-container" id="info-content">
-    <h1>About Prozo-Life</h1>
-    <p>
-      Prozo-Life is a dynamic platform designed to bridge the gap between talented developers and customers seeking high-quality digital solutions.
-      Whether you're a customer looking for professional website or app development, or a developer ready to work on exciting real-world projects,
-      Prozo-Life is your perfect launchpad.  
-      <br><br>
-      Our mission is to create opportunities, build connections, and empower individuals and businesses to thrive in the digital era.
-      Join us and be a part of a growing community that values innovation, collaboration, and success.
-    </p>
-  </div>
-
-  <!-- Dummy Contact Section -->
-  <div class="contact-section" id="contact">
-    <h2>Contact Us</h2>
-    <p>For inquiries, email us at: <strong>support@prozo-life.com</strong></p>
-  </div>
-
-  <script>
-    function showContent() {
-      const loginBox = document.getElementById('login-box');
-      loginBox.style.transition = "opacity 0.5s ease, transform 0.5s ease";
-      loginBox.style.opacity = "0";
-      loginBox.style.transform = "scale(0.8)";
-      setTimeout(() => {
-        loginBox.style.display = "none";
-        document.getElementById('info-content').style.display = "block";
-      }, 500);
-    }
-  </script>
-
 </body>
 </html>
